@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "client": "cd student-assist && npm start",
+    "init-db": "cd backend && npm run init-db",
+    "reset-db": "cd backend && npm run reset-db",
+    "setup": "npm run init-db && npm run dev",
+    "dev-with-db": "npm run init-db && npm run dev"
+  }
+}
